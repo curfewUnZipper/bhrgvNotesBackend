@@ -31,9 +31,6 @@ app.use(
 
 app.use(express.json());
 
-app.get('/',(req, res) => {
-res.send("WELCOME TO THIS HEADLESS SERVER");
-}
 
 //Routes
 app.use("/api/auth", require("./routes/auth"));
