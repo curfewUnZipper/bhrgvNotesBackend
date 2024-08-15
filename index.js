@@ -12,7 +12,9 @@ const http = require("http");
 
 // app.use(cors())
 
-const allowedOrigins = [process.env.CORS_ORIGIN || "http://localhost:5005 "];
+const allowedOrigins = [
+  process.env.CORS_ORIGIN || "https://bhrgv-notes-frontend.vercel.app/",
+];
 
 app.use(
   cors({
