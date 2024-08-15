@@ -31,7 +31,7 @@ app.use(
 
 app.use(express.json());
 
-app.get('/fetchallnotes', fetchuser, async (req, res) => {
+app.get('/',(req, res) => {
 res.send("WELCOME TO THIS HEADLESS SERVER");
 }
 
