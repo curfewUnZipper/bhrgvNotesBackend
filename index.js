@@ -31,6 +31,10 @@ app.use(
 
 app.use(express.json());
 
+app.get('/fetchallnotes', fetchuser, async (req, res) => {
+res.send("WELCOME TO THIS HEADLESS SERVER");
+}
+
 //Routes
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/notes", require("./routes/notes"));
