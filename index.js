@@ -13,7 +13,7 @@ const http = require("http");
 // app.use(cors())
 
 const allowedOrigins = [
-  process.env.CORS_ORIGIN || "https://bhrgv-notes-frontend.vercel.app/",
+  process.env.CORS_ORIGIN || "https://notesfront-seven.vercel.app/login",
 ];
 
 app.use(
