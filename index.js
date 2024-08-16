@@ -13,8 +13,7 @@ const http = require("http");
 // app.use(cors())
 
 const allowedOrigins = [
-  process.env.CORS_ORIGIN || "https://notesfront-seven.vercel.app/login",
-];
+  process.env.CORS_ORIGIN];
 
 app.use(
   cors({
