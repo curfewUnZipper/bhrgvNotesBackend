@@ -15,19 +15,11 @@ const http = require("http");
 const allowedOrigins = [
   process.env.CORS_ORIGIN];
 
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true, // If you need to send cookies or other credentials
-  })
-);
-
+app.use(cors({
+  origin: 'https://notesfront-seven.vercel.app', // Replace with your Vercel frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the HTTP methods you need
+  credentials: true // Allow cookies and other credentials to be sent
+}));
 app.use(express.json());
 
 //Routes
