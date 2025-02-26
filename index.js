@@ -15,11 +15,8 @@ const http = require("http");
 const allowedOrigins = [
   process.env.CORS_ORIGIN];
 
-app.use(cors({
-  origin: 'https://cloudscript-one.vercel.app/', // Replace with your Vercel frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the HTTP methods you need
-  credentials: true // Allow cookies and other credentials to be sent
-}));
+app.use(cors());
+
 app.use(express.json());
 
 //Routes
