@@ -16,7 +16,7 @@ const allowedOrigins = [
   process.env.CORS_ORIGIN];
 
 app.use(cors({
-  origin: 'https://notesfront-seven.vercel.app', // Replace with your Vercel frontend URL
+  origin: 'https://cloudscript-one.vercel.app/', // Replace with your Vercel frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the HTTP methods you need
   credentials: true // Allow cookies and other credentials to be sent
 }));
