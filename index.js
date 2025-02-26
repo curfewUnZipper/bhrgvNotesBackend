@@ -10,12 +10,24 @@ const port = process.env.PORT || 5000;
 
 const http = require("http");
 
-// app.use(cors())
-
+//app.use(cors());
 const allowedOrigins = [
-  process.env.CORS_ORIGIN];
+  "https://cloudscript-one.vercel.app",
+];
 
-app.use(cors());
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
+
 
 app.use(express.json());
 
