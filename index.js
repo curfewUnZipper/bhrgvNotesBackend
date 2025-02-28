@@ -13,6 +13,7 @@ const http = require("http");
 //app.use(cors());
 const allowedOrigins = [
   "https://cloudscript-one.vercel.app",
+  "http://192.168.0.150:5005"
 ];
 
 app.use(
